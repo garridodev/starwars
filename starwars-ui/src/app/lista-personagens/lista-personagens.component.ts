@@ -66,7 +66,7 @@ export class ListaPersonagensComponent implements OnInit {
     if(Math.round(this.dados.count / 10) < 1) {
       this.totalPaginas = 1;
     } else {
-      this.totalPaginas = Math.round(this.dados.count / 10);
+      this.totalPaginas = Math.round(this.dados.count / 10) + 1;
     }
   }
 
