@@ -1,0 +1,52 @@
+.conteudo {
+    background: #ececec;
+    color: var(--preto);
+    padding: 1rem 5rem;
+    height: 84vh;
+}
+
+.dv-pesquisa {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-icone {
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+}
+
+.input-icone > input {
+    width: 300px;
+    height: 30px;
+    border-radius: 6px;
+    box-shadow: none;
+    outline: none;
+    padding-left: 10px;
+    border: 1px solid var(--preto);
+}
+
+.lupa {
+    cursor: pointer;
+    position: relative;
+    right: 30px;
+    background: var(--amarelo);
+    color: var(--preto);
+    height: 30px;
+    width: 30px;
+    border: 1px solid var(--preto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 6px 6px 0;
+}
+
+.dv-corpo > div > span > a {
+    text-decoration: none;
+    color: black;
+}
+
+.dv-corpo > div > span > a:hover {
+    color: var(--cinza-azul);
+}

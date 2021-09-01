@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+    --amarelo: #ffe919;
+    --amarelo-c3po: #d4b111;
+    --amarelo-c3po-hover: #d0b43a;
+    --preto: #000000;
+    --branco: #FFFFFF;
+    --azul-claro: #58b5e0;
+    --azul: #3586e6;
+    --azul-escuro: #0f36a7;
+    --vermelho: #ec2027;
+
+    --cinza-claro: #bec0b1;
+    --cinza-azul: #6d9397;
+    --cinza-escuro: #353536;
+    --marron-areia: #f3d8a8;
+    --verde-fosco: #5f6247;
+    --bege: #b27d57;
+    --marron: #6c4e3b;
+
+    --rosa-claro: #edbacb;
+    --roxo-escuro: #59364e;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Cabin', sans-serif;
+    
+}
+
+body {
+    background: var(--preto);
+    color: var(--branco);
+}

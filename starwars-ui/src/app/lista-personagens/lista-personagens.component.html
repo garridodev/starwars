@@ -1,0 +1,36 @@
+<app-top-bar></app-top-bar>
+
+<div class="conteudo">
+	<h1>Personagens</h1><hr />
+	<div class="corpo">
+		<div class="dv-pesquisa">
+			<div style="margin: 50px 0 20px;">
+				<span>Digite para pesquisar um personagem: </span>
+				<div class="input-icone">
+					<input type="text" #textoDigitado>
+					<i class="fa fa-search lupa" style="cursor: pointer;" (click)="pesquisarPersonagem(textoDigitado.value)"></i>
+				</div>
+			</div>
+		</div>
+		<div class="dv-corpo">
+			<h3 style="margin-bottom: 15px">Lista de Personagens:</h3>
+			<div *ngFor="let personagem of dados?.results">
+				<span>
+					<a [routerLink]="">{{ personagem.name }}</a>
+				</span>
+			</div>
+		</div>
+		
+		<button (click)="anteriorPagina()">
+			anterior
+		</button>
+		<span>{{ contador }}</span>
+		<button (click)="proximaPagina()">
+			proximo
+		</button>
+	</div>
+	
+
+</div>
+
+

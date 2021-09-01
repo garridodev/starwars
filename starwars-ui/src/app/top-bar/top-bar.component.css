@@ -1,0 +1,21 @@
+.conteudo {
+    height: 35px;
+    /* font-family: 'Poller One', cursive; */
+    background: var(--preto);
+    color: var(--branco);
+    
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudo a{
+    color: var(--branco);
+    text-decoration: none;
+}
+
+.conteudo > a > h1 {
+    background: var(--preto);
+}
