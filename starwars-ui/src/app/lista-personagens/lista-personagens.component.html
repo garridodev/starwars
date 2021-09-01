@@ -1,36 +1,56 @@
 <app-top-bar></app-top-bar>
 
-<div class="conteudo">
-	<h1>Personagens</h1><hr />
+<div class="conteudo">	
 	<div class="corpo">
 		<div class="dv-pesquisa">
-			<div style="margin: 50px 0 20px;">
+			<div style="margin: 50px 0 20px 40px;">
 				<span>Digite para pesquisar um personagem: </span>
 				<div class="input-icone">
-					<input type="text" #textoDigitado>
-					<i class="fa fa-search lupa" style="cursor: pointer;" (click)="pesquisarPersonagem(textoDigitado.value)"></i>
+					<input type="text" [(ngModel)]="textoDigitado">
+					<i class="fa fa-times apagar" (click)="limparPesquisa()"></i>
+					<i class="fa fa-search lupa" style="cursor: pointer;" (click)="pesquisarPersonagem()"></i>
 				</div>
 			</div>
 		</div>
-		<div class="dv-corpo">
-			<h3 style="margin-bottom: 15px">Lista de Personagens:</h3>
-			<div *ngFor="let personagem of dados?.results">
-				<span>
-					<a [routerLink]="">{{ personagem.name }}</a>
-				</span>
-			</div>
-		</div>
-		
-		<button (click)="anteriorPagina()">
-			anterior
-		</button>
-		<span>{{ contador }}</span>
-		<button (click)="proximaPagina()">
-			proximo
-		</button>
-	</div>
-	
 
+		<div class="dv-grid">
+			<div class="dv-lista">
+				<div class="dv-corpo">
+					<h3 style="margin-bottom: 15px">Lista de Personagens:</h3>
+					<div *ngFor="let personagem of dados?.results">
+						<span>
+							<a (click)="exibirPersonagem(personagem)" style="cursor: pointer;">{{ personagem.name }}</a>
+						</span>
+					</div>
+				</div>
+				
+				<div class="paginacao">
+					<button class="btn-paginacao" [disabled]="!dados?.previous" (click)="anteriorPagina()">
+						<i class="fa fa-angle-left"></i>
+						anterior
+					</button>
+					<span style="font-size: 10px;">página {{ contador }} de {{ totalPaginas }}</span>
+					<button class="btn-paginacao" [disabled]="!dados?.next" (click)="proximaPagina()">
+						próximo
+						<i class="fa fa-angle-right"></i>
+					</button>
+				</div>
+			</div>
+
+			<div *ngIf="personagemExibicao" class="dv-personagem">
+				<h1>{{personagemExibicao.name}}</h1><br>
+				<div>
+					<p>Gênero: {{personagemExibicao.gender}}</p>
+					<p>Altura: {{personagemExibicao.height}}</p>
+					<p>Peso: {{personagemExibicao.mass}}</p>
+					<p>Aniversario: {{personagemExibicao.birth_year}}</p>
+					<p>Cor dos Olhos: {{personagemExibicao.eye_color}}</p>
+					<p>Cor do Cabelo: {{personagemExibicao.hair_color}}</p>
+					<p>Cor da Pele: {{personagemExibicao.skin_color}}</p>
+				</div>
+			</div>
+		</div>		
+	</div>
 </div>
 
 

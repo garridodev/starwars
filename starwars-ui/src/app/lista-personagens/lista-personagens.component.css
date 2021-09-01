@@ -2,13 +2,14 @@
     background: #ececec;
     color: var(--preto);
     padding: 1rem 5rem;
-    height: 84vh;
+    min-height: 84vh;
 }
 
 .dv-pesquisa {
     margin-bottom: 30px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .input-icone {
@@ -20,7 +21,7 @@
 .input-icone > input {
     width: 300px;
     height: 30px;
-    border-radius: 6px;
+    border-radius: 6px 0 0 6px;
     box-shadow: none;
     outline: none;
     padding-left: 10px;
@@ -31,8 +32,8 @@
     cursor: pointer;
     position: relative;
     right: 30px;
-    background: var(--amarelo);
-    color: var(--preto);
+    background: var(--amarelo-c3po);
+    color: var(--branco);
     height: 30px;
     width: 30px;
     border: 1px solid var(--preto);
@@ -40,6 +41,26 @@
     justify-content: center;
     align-items: center;
     border-radius: 0 6px 6px 0;
+    border-left: none !important;
+
+    transition: background 0.2s;
+}
+
+.apagar {
+    color: black;
+    cursor: pointer;
+    position: relative;
+    right: 30px;
+    color: var(--preto);
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lupa:hover {
+    background: var(--amarelo-c3po-hover);
 }
 
 .dv-corpo > div > span > a {
@@ -49,4 +70,50 @@
 
 .dv-corpo > div > span > a:hover {
     color: var(--cinza-azul);
+}
+
+.dv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.dv-lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dv-personagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid;
+}
+
+.paginacao {
+    display: flex;
+    position: relative;
+    width: 280px;
+    justify-content: center;
+    column-gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.btn-paginacao {
+    width: 75px;
+    padding: 0 5px;
+    height: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 6px;
+    border: 1px solid;
+    cursor: pointer;
+
+    transition: background 0.2s;
+}
+
+.btn-paginacao:hover {
+    background: var(--amarelo-c3po-hover);
 }

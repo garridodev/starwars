@@ -19,3 +19,15 @@
 .conteudo > a > h1 {
     background: var(--preto);
 }
+
+.dv-starwars {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dv-starwars > img {
+    width: 50px;
+    margin-left: 10px;
+}
